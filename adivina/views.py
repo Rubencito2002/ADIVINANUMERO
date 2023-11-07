@@ -13,4 +13,4 @@ def guess(request):
         message = 'Your guess is too high. Try again'
     else:
         message = 'Your guess is too low. Try again'
-    return render(request, 'adivina/adivina.html', {'message':message})
+    return render(request, 'adivina/guess.html', {'message':message})

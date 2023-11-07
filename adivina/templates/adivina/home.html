@@ -6,6 +6,11 @@
     <title>Advina Numero</title>
 </head>
 <body>
-    
+    <h1>Welcome to the Number Guessing Game!</h1>
+    <form action="{% url 'guess' %}" method="post">
+        {% csrf_token %}
+        <input type="number" name="guess" required>
+        <button  type="submit">Submit</button>
+    </form>
 </body>
 </html>
