@@ -6,7 +6,7 @@ def home(request):
 
 def guess(request):
     ramdom_number = random.randint(1, 100)
-    number_user = int(request.POST.get('number_user'))
+    number_user = int(request.POST['guess'])
     if number_user == ramdom_number:
         message = 'Congratulations, you guessed the number'
     elif number_user > ramdom_number:
